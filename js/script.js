@@ -57,6 +57,31 @@ const membersTeam = [
 ]
 console.table(membersTeam);
 
+/**
+ * % Funzione che crea il template
+ * @param {string} name Il nome del membro del team
+ * @param {string} role Il ruolo del membro del team
+ * @param {string} image L'indirizzo dell'immagine
+ */
+function createTemplate(name, role, image) {
+    templateHTML += `
+    <div class="col">
+        <div class="card mb-3 border-0">
+            <div class="row g-0">
+                <div class="col-5">
+                    <img src="img/${image}" class="rounded-start" alt="${name}">
+                </div>
+                <div class="col-7">
+                    <div class="card-body h-100 d-flex flex-column justify-content-center mt-0">
+                        <h5 class="card-title fw-semibold">${name}</h5>
+                        <p class="card-text text-blue">${role}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
 // # FASE DI ELABORAZIONE
 // Creo una variabile d'appoggio per creare il template literal
 let templateHTML = '';
@@ -80,22 +105,7 @@ for (let i = 0; i < membersTeam.length; i++) {
     console.log(memberImage);
 
     // Concateno il template
-    templateHTML += `
-    <div class="col">
-        <div class="card mb-3 border-0">
-            <div class="row g-0">
-                <div class="col-5">
-                    <img src="img/${memberImage}" class="rounded-start" alt="${memberName}">
-                </div>
-                <div class="col-7">
-                    <div class="card-body h-100 d-flex flex-column justify-content-center mt-0">
-                        <h5 class="card-title">${memberName}</h5>
-                        <p class="card-text text-blue">${memberRole}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>`;
+    createTemplate(memberName, memberRole, memberImage);
 }
 console.log(templateHTML);
 
