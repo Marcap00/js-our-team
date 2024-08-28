@@ -82,7 +82,7 @@ for (let i = 0; i < membersTeam.length; i++) {
     // Concateno il template
     templateHTML += `
     <div class="col">
-        <div class="card mb-3">
+        <div class="card mb-3 border-0">
             <div class="row g-0">
                 <div class="col-5">
                     <img src="img/${memberImage}" class="rounded-start" alt="${memberName}">
@@ -90,7 +90,7 @@ for (let i = 0; i < membersTeam.length; i++) {
                 <div class="col-7">
                     <div class="card-body h-100 d-flex flex-column justify-content-center mt-0">
                         <h5 class="card-title">${memberName}</h5>
-                        <p class="card-text">${memberRole}</p>
+                        <p class="card-text text-blue">${memberRole}</p>
                     </div>
                 </div>
             </div>
