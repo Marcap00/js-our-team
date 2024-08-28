@@ -33,7 +33,7 @@ img {
 }
 
 .row .card:active {
-    scale: 1;
+    scale: 1.05;
 }
 
 /* $ Responsive */
