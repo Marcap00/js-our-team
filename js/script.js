@@ -59,7 +59,7 @@ console.table(membersTeam);
 
 // # FASE DI ELABORAZIONE
 // Creo una variabile d'appoggio per creare il template literal
-let item = '';
+let templateHTML = '';
 for (let i = 0; i < membersTeam.length; i++) {
 
     // Recupero i membri del team (elementi dell'array)
@@ -78,5 +78,28 @@ for (let i = 0; i < membersTeam.length; i++) {
     // Preparo le immagini
     const memberImage = member.image;
     console.log(memberImage);
+
+    // Concateno il template
+    templateHTML += `
+    <div class="col">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/${memberImage}" class="rounded-start" alt="${memberName}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">${memberName}</h5>
+                        <p class="card-text">${memberRole}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`;
 }
+console.log(templateHTML);
+
+// # FASE DI OUTPUT
+// Arcodo il template alla row in pagina
+row.innerHTML = templateHTML;
 
