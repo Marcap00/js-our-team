@@ -1,5 +1,20 @@
-/* # Utilities */
+/* $ General */
+* {
+    font-family: 'Poppins';
+}
+
+
+/* $ Utilities */
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-height: 100%;
+}
+
+
+/* $ Responsive */
+
+@media screen and (min-width: 768px) {
+    main {
+        height: 100vh;
+    }
 }
