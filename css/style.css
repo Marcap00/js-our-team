@@ -3,6 +3,10 @@
     font-family: 'Poppins';
 }
 
+main {
+    background-color: steelblue;
+}
+
 
 /* $ Utilities */
 img {
@@ -10,6 +14,27 @@ img {
     max-height: 100%;
 }
 
+.text-blue {
+    color: steelblue;
+}
+
+
+/* $ Card */
+
+.row .card {
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.row .card:hover {
+    scale: 1.05;
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px #fff;
+}
+
+.row .card:active {
+    scale: 1;
+}
 
 /* $ Responsive */
 
